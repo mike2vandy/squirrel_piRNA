@@ -88,6 +88,6 @@ z = (main - np.mean(background))/np.std(background)
 
 #prints the file name prefix of bed2 file and Z score 
 if math.isnan(z):
-  print "{}\t{}\t{}\t{}".format(sys.argv[1].split('.')[0], 0)
+  print "{}\t{}\t{}".format(sys.argv[1].split('.')[0], 0)
 else:
-  print "{}\t{}\t{}\t{}".format(sys.argv[1].split('.')[0], z)
+  print "{}\t{}\t{}".format(sys.argv[1].split('.')[0], z)
