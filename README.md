@@ -11,23 +11,20 @@ intersectBed -a <mappedPirna.bed2> -b <TEannos.gtf> -wa -wb > <piTEintersect.out
 
 splitIntersect.py <piTEintersect.out>
 
-for i in TEfamilyIntersects; do piZscrore.py $i; done
+for i in TEfamilyIntersects; do piZscrore.py $i; done >> <Zscore.out>
 
 # Individual script descriptions  
 
 ## normPi.py 
-This script will read in a small RNA BED file,  
-normalize piRNA count data as parts per million (ppm),  
-record how many locations a piRNA mapped to, and create  
-a 2nd bed file with the ppm and map count information on each line.  
-This script is used prior to calculating Zscores. 
+This script will read in a small RNA BED file, normalize piRNA count data as parts per million (ppm),  
+record how many locations a piRNA mapped to, and create a 2nd bed file with the ppm and map count information on each line.  
   
 Usage:  
 `normPi.py <input.bed> > <output.bed2>`  
 
 ## splitIntersect.py  
-After intersecting mapped small RNAs and TE annotatios, I use this script to  
-split the intersect file into individual TE family files. 
+After intersecting mapped small RNAs and TE annotatios, I use this script to split the intersect file  
+into individual TE family files.  
 
 Usage:  
 `splitIntersect.py <intersectBed.out>`  
