@@ -24,9 +24,9 @@ with open(sys.argv[1]) as f:
     if RNA == False:
       if transId in transCount:
         transCount[transId] += 1
-        print "{}\tsqu_rmsk\texon\t{}\t{}\t.\t{}\t.\tgene_id \"{}\"; transcript_id \"{}_dup{}\"; family_id \"{}\"; class_id \"{}\";".format(chrm, start, stop, orient, geneId, transId, transCount[transId], familyId, classId)
+        print "{}\trmsk\texon\t{}\t{}\t.\t{}\t.\tgene_id \"{}\"; transcript_id \"{}_dup{}\"; family_id \"{}\"; class_id \"{}\";".format(chrm, start, stop, orient, geneId, transId, transCount[transId], familyId, classId)
       else:
         transCount[transId] = 0
-        print "{}\tsqu_rmsk\texon\t{}\t{}\t.\t{}\t.\tgene_id \"{}\"; transcript_id \"{}\"; family_id \"{}\"; class_id \"{}\";".format(chrm, start, stop, orient, geneId, transId, familyId, classId)
+        print "{}\trmsk\texon\t{}\t{}\t.\t{}\t.\tgene_id \"{}\"; transcript_id \"{}\"; family_id \"{}\"; class_id \"{}\";".format(chrm, start, stop, orient, geneId, transId, familyId, classId)
     
    
