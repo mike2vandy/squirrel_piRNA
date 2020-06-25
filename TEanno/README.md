@@ -1,6 +1,20 @@
 
 # These scripts were used in Vandewege et al. <title> <year>
 
+# Overall pipeline pseudocode to work with TE annotations
+
+calcDivergenceFromAlignModified.pl <RepeatMaskerOutput.align> > <k2p.out>
+
+RM2bed.py <consensusSequences.fas> <k2p.out> > <k2p.bed>
+
+sortBed -i <k2p.bed> |clusterBed -s > <k2p.clustered.bed>
+
+filterTEAnnos.py <k2p.clustered.bed> > <k2p.filtered.bed>
+
+statsForTEFamilies.py <k2p.filtered.bed> <genomeSize[int]> > <TEStats.out>
+
+bed2gtf.py <k2p.filtered.bed> > <k2p.filtered.gtf>
+
 ## calcDivergenceFromAlignModified.pl  
 
 This script is a modification of a Perl script that comes with RepeatMasker. It will read a .align file and produce a tab delimited TE annotation file with Kimura 2-parameter distances.  
