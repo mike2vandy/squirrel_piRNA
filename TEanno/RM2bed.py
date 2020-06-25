@@ -25,7 +25,7 @@ with open(sys.argv[2]) as f:
     length = end - start
     orient = fields[8].replace('C', '-')
     element_id = fields[9].split('#')[0]
-    element_type = fields[10].split('#')[1]
+    element_type = fields[9].split('#')[1]
     try: 
       cons_len = len(seq_dict[element_id + '#' + element_type])
       perct = float(length) / float(cons_len) * 100
