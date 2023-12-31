@@ -1,5 +1,5 @@
 
-# These scripts were used in Vandewege et al. <title> <year>
+# These scripts were used in Vandewege et al. The PIWI/piRNA response is relaxed in a rodent that lacks mobilizing transposable elements 2022
 
 All python scripts are written in python 2.7.  
 
